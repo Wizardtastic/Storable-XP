@@ -52,13 +52,13 @@ public class XpStorageBottleItem extends Item {
         if (player.isSneaking()) {
             int playerXp = getPlayerTotalXp(player);
             if (playerXp <= 0) {
-                if (!world.isClient) {
+                if (!world.isClient()) {
                     player.sendMessage(Text.translatable("message.xp_saver.no_xp").formatted(Formatting.RED), true);
                 }
                 return ActionResult.FAIL;
             }
 
-            if (!world.isClient) {
+            if (!world.isClient()) {
                 int stored = getStoredXp(stack);
                 int newTotal = stored + playerXp;
                 setStoredXp(stack, newTotal);
@@ -75,7 +75,7 @@ public class XpStorageBottleItem extends Item {
 
         int stored = getStoredXp(stack);
         if (stored <= 0) {
-            if (!world.isClient) {
+            if (!world.isClient()) {
                 player.sendMessage(Text.translatable("message.xp_saver.empty").formatted(Formatting.RED), true);
             }
             return ActionResult.FAIL;
@@ -86,7 +86,7 @@ public class XpStorageBottleItem extends Item {
 
     @Override
     public ItemStack finishUsing(ItemStack stack, World world, LivingEntity user) {
-        if (user instanceof PlayerEntity player && !world.isClient) {
+        if (user instanceof PlayerEntity player && !world.isClient()) {
             int stored = getStoredXp(stack);
             if (stored > 0) {
                 player.addExperience(stored);

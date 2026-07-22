@@ -1,0 +1,14 @@
+{
+  "projectPath": ":",
+  "classpaths": {
+    "test": [
+      "C:\\Users\\Walker\\Documents\\Silly Shit\\xp-saver-mod\\versions\\1.21.11\\build\\classes\\java\\test",
+      "C:\\Users\\Walker\\Documents\\Silly Shit\\xp-saver-mod\\versions\\1.21.11\\build\\resources\\test"
+    ],
+    "main": [
+      "C:\\Users\\Walker\\Documents\\Silly Shit\\xp-saver-mod\\versions\\1.21.11\\build\\classes\\java\\main",
+      "C:\\Users\\Walker\\Documents\\Silly Shit\\xp-saver-mod\\versions\\1.21.11\\build\\resources\\main",
+      "C:\\Users\\Walker\\Documents\\Silly Shit\\xp-saver-mod\\versions\\1.21.11\\build\\devlibs\\xp-saver-1.21.11-1.0.0-dev.jar"
+    ]
+  }
+}

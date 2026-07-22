@@ -4,6 +4,8 @@ import net.fabricmc.api.ModInitializer;
 import net.minecraft.item.Item;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.RegistryKeys;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -12,7 +14,7 @@ public class XpSaverMod implements ModInitializer {
     public static final String MOD_ID = "xp_saver";
     public static final Logger LOGGER = LoggerFactory.getLogger(MOD_ID);
 
-    public static final Item XP_STORAGE_BOTTLE = new XpStorageBottleItem(new Item.Settings().maxCount(1));
+    public static final Item XP_STORAGE_BOTTLE = new XpStorageBottleItem(new Item.Settings().maxCount(1).registryKey(RegistryKey.of(RegistryKeys.ITEM, Identifier.of(MOD_ID, "xp_storage_bottle"))));
 
     @Override
     public void onInitialize() {

@@ -1,0 +1,21 @@
+﻿{
+  "schemaVersion": 1,
+  "id": "xp_saver",
+  "version": "${version}",
+  "name": "XP Saver",
+  "description": "Store your XP in a bottle using shift-right-click, and drink it back whenever you need it.",
+  "authors": ["sillyshit"],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/xp_saver/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.sillyshit.xpsaver.XpSaverMod"],
+    "client": ["com.sillyshit.xpsaver.XpSaverModClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.10",
+    "minecraft": "~1.21.7",
+    "fabric-api": "*"
+  }
+}

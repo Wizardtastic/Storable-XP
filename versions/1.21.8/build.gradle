@@ -1,0 +1,34 @@
+plugins {
+    id 'fabric-loom' version '1.10.5'
+    id 'maven-publish'
+}
+version = "1.0.0"
+group = "com.sillyshit"
+base { archivesName = "xp-saver-1.21.8" }
+repositories {}
+dependencies {
+    minecraft "com.mojang:minecraft:1.21.8"
+    mappings "net.fabricmc:yarn:1.21.8+build.1:v2"
+    modImplementation "net.fabricmc:fabric-loader:0.19.3"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:0.136.1+1.21.8"
+}
+sourceSets {
+    main {
+        java { srcDir "C:/Users/Walker/Documents/Silly Shit/xp-saver-mod/src/override-1.21.5/main/java" }
+        resources {
+            srcDir "C:/Users/Walker/Documents/Silly Shit/xp-saver-mod/src/main/resources"
+            srcDir project.projectDir.toString().replace('\\', '/') + "/src/main/resources"
+        }
+    }
+}
+tasks.withType(JavaCompile).configureEach { it.options.release = 21 }
+java { withSourcesJar(); sourceCompatibility = JavaVersion.VERSION_21; targetCompatibility = JavaVersion.VERSION_21 }
+processResources {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+    inputs.property "version", project.version
+    filteringCharset "UTF-8"
+    filesMatching("fabric.mod.json") { expand "version": project.version }
+}
+tasks.named('sourcesJar', Jar) {
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
+}
