@@ -1,9 +1,0 @@
-{
-  "item.xp_saver.xp_storage_bottle": "XP Storage Bottle",
-  "message.xp_saver.no_xp": "You have no XP to store!",
-  "message.xp_saver.stored": "Stored %s XP (Total: %s XP in bottle)",
-  "message.xp_saver.empty": "This bottle is empty! Store XP by sneaking and right-clicking.",
-  "message.xp_saver.drank": "Consumed %s XP!",
-  "tooltip.xp_saver.stored_xp": "%s XP stored",
-  "tooltip.xp_saver.empty": "Empty"
-}

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "xp_saver",
-  "version": "",
+  "version": "${version}",
   "name": "XP Saver",
   "description": "Store your XP in a bottle using shift-right-click, and drink it back whenever you need it.",
   "authors": ["sillyshit"],
