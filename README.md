@@ -1,0 +1,1 @@
+A simple lightweight storable xp mod, adding an xp bottle (Crafted by inserting an empty bottle into a crafting table) used to store and drink xp out of. Nothing fancy done, no new textures (I suck at them), and just gets the job done.
